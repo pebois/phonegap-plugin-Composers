@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.kernix.composers"
+    version="1.0.0">
+  <engines>
+    <engine name="cordova" version=">=3.0.0" />
+  </engines>
+  <name>Composers</name>
+  <description>Phonegap composers plugin</description>
+  <author>Pierre-Emmanuel Bois</author>
+  <email>pebois@kernix.com</email>
+  <license>Apache 2.0 License</license>
+  <js-module src="www/composers.js" name="Composers">
+    <clobbers target="Composers" />
+  </js-module>
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="Composers">
+        <param name="ios-package" value="Composers"/>
+      </feature>
+    </config-file>
+    <framework src="MessageUI.framework"/>
+    <header-file src="src/ios/Composers.h" />
+    <source-file src="src/ios/Composers.m" />
+  </platform>
+</plugin>
