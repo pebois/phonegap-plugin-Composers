@@ -10,7 +10,7 @@ Phonegap composers plugin
 ## Using the plugin ##
 
 ### sms ###
-```
+```js
 Composers.sms({toRecipients: tel}, function (msg) {
     console.log('Composers.sms: start {msg: "'+msg+'"}');
 }, function (code) {
@@ -21,7 +21,7 @@ Composers.sms({toRecipients: tel}, function (msg) {
 ```
 
 ### email ###
-```
+```js
 Composers.email({toRecipients: email}, function (msg) {
     console.log('Composers.email: start {msg: "'+msg+'"}');
 }, function (code) {
